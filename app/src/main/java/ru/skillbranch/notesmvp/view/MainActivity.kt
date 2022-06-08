@@ -15,7 +15,7 @@ import ru.skillbranch.notesmvp.presenter.ViewApi
 
 class MainActivity : AppCompatActivity(), ViewApi {
     lateinit var binding: ActivityMainBinding
-    val presenter = MainPresenter(this,Model())
+    val presenter = MainPresenter(Model())
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
