@@ -1,14 +1,13 @@
 package ru.skillbranch.notesmvp.presenter
 
-import android.content.Context
 
-class MainPresenter(val View:ViewApi, var model:DataApi) {
-    private var context: Context? = null
-    fun init(_view: Context){
+class MainPresenter(val model:DataApi) {
+    private var context: ViewApi? = null
+    fun init(_view: ViewApi){
         context = _view
-        View.showData()
-        View.clickButtonGet()
-        View.clickBattonSave()
+        context.showData()
+        context.clickButtonGet()
+        context.clickBattonSave()
     }
 
 
